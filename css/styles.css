@@ -1,0 +1,183 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  color: #ffffff !important;
+
+  main {
+    background-color: #42a5f5 !important;
+  }
+}
+
+.header {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.wrapper {
+  width: inherit;
+}
+
+.side-nav, .side-nav li a, .collapsible-body li a {
+  background-color: #42a5f5 !important;
+  color: #ffffff !important;
+}
+
+footer.page-footer {
+  margin-top: 0;
+  padding-top: 0;
+  padding-right: 5px;
+}
+
+.clamped {
+  margin: 0;
+}
+
+.space-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.space-l-10 {
+  padding-left: 10px;
+}
+
+.space-1 {
+  padding-left: 1%;
+}
+
+.padding-2 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+a {
+	white-space:nowrap;
+  display: inline-block;
+}
+
+h4 {
+  width: inherit;
+}
+
+.inv {
+  display: none;
+}
+
+.breadcrumb:before {
+  cursor: default;
+  margin-left: 0;
+}
+
+blockquote {
+  border-left-color: #64dd17;
+}
+
+.first {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.highlight {
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: initial;
+  transition-delay: initial;
+  cursor: pointer;
+}
+
+.highlight:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bc-dd {
+  display: inline-block;
+  padding-left: 2px;
+}
+
+.menu {
+  padding: 1%;
+  color: inherit;
+}
+
+.space-5-r {
+  padding-right: 5%;
+}
+
+.space-3-l {
+  padding-left: 3%;
+}
+
+.space-5-v {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.space-2-v {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.space-1-v {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.space-1-b {
+  padding-bottom: 1%;
+}
+
+.border-blue {
+  border-color: #42a5f5;
+}
+
+.margin-1-v {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cursor-def {
+  cursor: default;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.tiny {
+  font-size: 7px;
+}
+
+.tiny-padding {
+  padding: 0.2rem 0.5rem;
+}
+
+.wrap {
+  display:inline-block;
+}
+
+.blend {
+  color: #42A5F5;
+}
+
+.padding-end {
+  padding-bottom: 1rem;
+}
+
+.mini-padding {
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.padding-v {
+  padding-top: 0.5rem;
+  paddin-bottom: 0.5rem;
+}
+
+.padding-img {
+  padding:0.5rem;
+}
