@@ -1,5 +1,6 @@
 var list = new Array();
 var increment = 0;
+var img;
 
 $(function(){
 $.when(
@@ -13,9 +14,9 @@ $.when(
 });
 
 function rotate(){
+img = document.getElementById('deactive');
 $("#deactive").attr('src', list[increment]);
-
-
+img.style.opacity = "1";
 //$("#active").attr('src', list[increment]);
 
 setTimeout(function(){
@@ -26,9 +27,12 @@ setTimeout(function(){
         increment = 0;
     }
 
+    img.style.opacity = "0";
     //$("#deactive").attr('src', list[increment]);
+    setTimeout(function() {
+      Materialize.fadeInImage('#deactivate');
+    }, 1400);
 
-    //Materialize.fadeInImage('#deactivate');
     setTimeout(function() {
       rotate();
     }, 1400);
