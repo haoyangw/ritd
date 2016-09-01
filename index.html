@@ -2,7 +2,7 @@
 <html>
   <head>
     <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/styles.css"  media="screen,projection"/>
@@ -21,7 +21,9 @@
     <div>
       <header>
         <div class="header valign-wrapper deep-purple lighten-1">
-          <a class="left highlight menu hide-on-large-only" data-activates="nav"><i class="material-icons">&#xe5d2</i></a>
+          <a href="#" class="left highlight menu hide-on-large-only button-collapse" data-activates="nav-mobile">
+            <i class="material-icons">&#xe5d2</i>
+          </a>
           <h4 class="center-align padding-2"><b>Teacher's Day 2016 :D</b></h4>
         </div>
       <!--<nav class="deep-purple lighten-1">
@@ -40,14 +42,16 @@
           </ul>
         </div>
       </nav>-->
-      <ul id="nav" class="side-nav fixed collapsible border-blue">
+      <ul id="nav-mobile" class="side-nav fixed border-blue">
         <li><a href="#" class="waves-effect waves-light" onclick="Materialize.toast('You are already on the home page XD', 3000)">Home</a></li>
         <li>
-          <a class="collapsible-header waves-effect waves-light" href="#!">
-            Subjects<i class="material-icons right white-text">arrow_drop_down</i>
-          </a>
-          <div class="collapsible-body">
-            <ul>
+          <ul class="collapsible">
+            <li>
+              <a class="collapsible-header waves-effect waves-light" href="#!">
+                Subjects<i class="material-icons right white-text">arrow_drop_down</i>
+              </a>
+              <div class="collapsible-body">
+                <ul>
         		    <li><a href="html/subjects/eng.html">English</a></li>
         		    <li><a href="html/subjects/mt.html">MT</a></li>
                 <li><a href="html/subjects/math.html">Math</a></li>
@@ -60,8 +64,10 @@
                 <li><a href="html/subjects/cle.html">CLE</a></li>
                 <li><a href="html/subjects/pe.html">PE</a></li>
                 <li><a href="html/subjects/philo.html">Philo</a></li>
-        	  </ul>
-          </div>
+        	     </ul>
+             </div>
+           </li>
+         </ul>
         </li>
         <li><a href="html/music.html" class="waves-effect waves-light">Music</a></li>
         <li><a href="html/challenge/intro.html" class="waves-effect waves-light">Challenge</a></li>
