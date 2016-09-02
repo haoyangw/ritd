@@ -16,17 +16,66 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/img-anim.js"></script>
+    <script type="text/javascript" src="js/fill.js"></script>
+    <script type="text/javascript">
+      var list = new Array();
+      var increment = 0;
+      var img;
+      $(".button-collapse").sideNav();
+      $('.collapsible').collapsible();
+
+      $(function(){
+        $.when(
+          $("#image_preload img").each(function(i, e){
+            image = $(this).attr('src');
+            list.push(image);
+          })
+        ).then(function(){
+          rotate()
+        });
+      });
+
+      function rotate(){
+        img = document.getElementById('deactive');
+        $("#deactive").attr('src', list[increment]);
+        img.style.opacity = "1";
+        //$("#active").attr('src', list[increment]);
+
+        setTimeout(function(){
+          Materialize.fadeOutImage("#deactive");
+          increment++;
+
+          if(increment == list.length){
+            increment = 0;
+          }
+
+          img.style.opacity = "0";
+          //$("#deactive").attr('src', list[increment]);
+          setTimeout(function() {
+            Materialize.fadeInImage('#deactivate');
+          }, 1400);
+
+          setTimeout(function() {
+            rotate();
+          }, 1400);
+
+
+          /**$("#deactive").fadeIn(1000, function(){
+            rotate();
+          });**/
+        }, 4000);
+      }
+    </script>
 
     <div>
-      <header>
+      <header id="header">
         <div class="header valign-wrapper deep-purple lighten-1">
-          <a href="#" class="left highlight menu hide-on-large-only button-collapse" data-activates="nav-mobile">
+          <a href="#" class="left highlight hide button-collapse" data-activates="nav-mobile">
             <i class="material-icons">&#xe5d2</i>
           </a>
           <h4 class="center-align padding-2"><b>Teacher's Day 2016 :D</b></h4>
         </div>
-      <!--<nav class="deep-purple lighten-1">
+      <nav class="deep-purple lighten-1 hide-on-large-only">
         <div class="nav-wrapper">
           <ul>
             <li><a href="#" onclick="Materialize.toast('You are already on the home page XD', 3000)">Home</a></li>
@@ -41,7 +90,21 @@
             <li><a href="#">Credits</a></li>
           </ul>
         </div>
-      </nav>-->
+      </nav>
+      <ul id="dd_subjects" class="dropdown-content">
+      <li><a href="html/subjects/eng.html">English</a></li>
+      <li><a href="html/subjects/mt.html">MT</a></li>
+      <li><a href="html/subjects/math.html">Math</a></li>
+      <li><a href="html/subjects/chem.html">Chem</a></li>
+      <li><a href="html/subjects/phys.html">Phys</a></li>
+      <li><a href="html/subjects/bio.html">Bio</a></li>
+      <li><a href="html/subjects/hist.html">Hist</a></li>
+      <li><a href="html/subjects/geog.html">Geog</a></li>
+      <li><a href="html/subjects/ss.html">SS</a></li>
+      <li><a href="html/subjects/cle.html">CLE</a></li>
+      <li><a href="html/subjects/pe.html">PE</a></li>
+      <li><a href="html/subjects/philo.html">Philo</a></li>
+     </ul>
       <ul id="nav-mobile" class="side-nav fixed border-blue">
         <li><a href="#" class="waves-effect waves-light" onclick="Materialize.toast('You are already on the home page XD', 3000)">Home</a></li>
         <li>
@@ -75,7 +138,7 @@
       </ul>
     </header>
     <main>
-      <div class="blue lighten-1">
+      <div id="main" class="blue lighten-1">
         <div class="container">
           <div class="center-align space-2-v">
             <blockquote class="clamped flow-text space-1-v">
@@ -107,7 +170,7 @@
           </div>
       </div>
     </main>
-    <footer class="page-footer blue">
+    <footer id="footer" class="page-footer blue">
       <div class="footer-copyright right-align">
       <b class="white-text">Designed by 3/<a class="white-text tooltipped" data-tooltip="You found me! Click?" data-position="top" href="html/challenge/endpt.html">4K</a> '15/16 and 1/2C '13/14</b>
     </div>
